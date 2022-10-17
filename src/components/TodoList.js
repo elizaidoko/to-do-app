@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react'
 import TodoForm from './TodoForm'
 import Todo from './Todo'
 import axios from 'axios'
-import { Card, Container } from 'react-bootstrap'
+import { Button, Card, Container } from 'react-bootstrap'
+import TodoNum from './TodoNum'
 
 
 function TodoList() {
@@ -100,12 +101,16 @@ function TodoList() {
 
       setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)))
     }
+    
+
+
 
   return (
    
       <div className="py-5 mx-auto" style={{ display: 'block', 
       padding: 30 }}>
         <h1>Whats the plan for today?</h1>
+        <TodoNum/>
         <br></br>
         <TodoForm onSubmit={addTodo}/>
         <Todo 
