@@ -104,7 +104,6 @@ function TodoList() {
   return (
    
       <div className="py-5 mx-auto" style={{ display: 'block', 
-      width: 600, 
       padding: 30 }}>
         <h1>Whats the plan for today?</h1>
         <br></br>
